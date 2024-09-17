@@ -1,1 +1,0 @@
-0000000000000000000000000000000000000000 e8dac87f2c42a8c17805ff9b89907a22254f757f Kenneth Mead <48263885+Xerner@users.noreply.github.com> 1726539861 -0400	fetch --quiet github --prune --recurse-submodules=no --tags +refs/heads/*:refs/remotes/github/* +refs/heads/development:refs/remotes/github/development +refs/tags/*:refs/tags/*: storing head

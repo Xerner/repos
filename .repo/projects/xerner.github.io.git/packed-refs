@@ -1,4 +1,0 @@
-# pack-refs with: peeled fully-peeled sorted 
-e8dac87f2c42a8c17805ff9b89907a22254f757f refs/remotes/github/development
-b036502cf7b4eb62239e9a1033805876a74431de refs/remotes/github/main
-dec92560994c03be16b8757201869433f1341530 refs/tags/1.0.0
