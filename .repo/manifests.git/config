@@ -1,0 +1,46 @@
+[core]
+	repositoryFormatVersion = 1
+	filemode = false
+	ignorecase = true
+[filter "lfs"]
+	smudge = git-lfs smudge --skip -- %f
+	process = git-lfs filter-process --skip
+[remote "origin"]
+	url = https://github.com/Xerner/manifests
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[manifest]
+	platform = auto
+[extensions]
+	preciousObjects = true
+[branch "default"]
+	remote = origin
+	merge = refs/heads/development
+[repo]
+	existingprojectcount = 6
+	newprojectcount = 0
+[repo "syncstate.main"]
+	synctime = 2024-09-17T02:39:38.346865+00:00
+	version = 1
+[repo "syncstate.sys"]
+	argv = ['C:\\\\Users\\\\kenne\\\\Projects\\\\.repo\\\\repo/main.py', '--repo-dir=C:\\\\Users\\\\kenne\\\\Projects\\\\.repo', '--wrapper-version=2.45', '--wrapper-path=C:\\\\Users\\\\kenne\\\\.bin\\\\repo', '--', 'sync']
+[repo "syncstate.options"]
+	jobs = 4
+	outermanifest = true
+	jobsnetwork = 4
+	jobscheckout = 4
+	mpupdate = true
+	clonebundle = true
+	retryfetches = 0
+	prune = true
+	repoverify = true
+	quiet = false
+	verbose = false
+[repo "syncstate.remote.origin"]
+	url = https://github.com/Xerner/manifests
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[repo "syncstate.branch.default"]
+	remote = origin
+	merge = refs/heads/development
+[repo "syncstate.repo"]
+	existingprojectcount = 6
+	newprojectcount = 0

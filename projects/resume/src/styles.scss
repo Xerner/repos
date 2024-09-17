@@ -1,0 +1,31 @@
+@import "./styles/page.scss";
+@import "./styles/background.scss";
+@import "./styles/typography.scss";
+
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply h-screen bg-slate-300;
+
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+body > :first-child{
+  @apply h-full;
+
+  display: block;
+}
+
+@media print {
+  .noprint {
+    display: none;
+  }
+
+  body {
+    background-color: white;
+  }
+}

@@ -1,0 +1,20 @@
+@use "sass:math";
+
+@media screen, print {
+  .bg-primary {
+    @apply bg-indigo-100;
+  }
+
+  .bg-secondary {
+    @apply bg-indigo-900;
+  }
+
+  $startingPercentage: 97;
+  $interval: 1;
+
+  @for $i from 1 through 7 {
+    .bg-indigo-#{$i} {
+      background-color: hsl(230, 94%, calc(calc($startingPercentage - ($interval * $i)) * 1%));
+    }
+  }
+}

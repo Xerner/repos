@@ -1,0 +1,8 @@
+@if (!hasImageData()) {
+  <app-centered-icon icon="image" title="No Image" class="grow">
+    No Image
+  </app-centered-icon>
+}
+<div class="flex items-center justify-center {{!hasImageData() ? HIDDEN_CLASS : 'h-full'}}">
+  <canvas #canvas willReadFrequently="true" [class]="canvasClass()"></canvas>
+</div>

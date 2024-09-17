@@ -1,0 +1,12 @@
+{
+	"folders": [
+    {
+      "name": "ColorSlicer",
+      "path": "."
+    },
+    {
+      "path": "src/app"
+    }
+  ],
+  "settings": {}
+}

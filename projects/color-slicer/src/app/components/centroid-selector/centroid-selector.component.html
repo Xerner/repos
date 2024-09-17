@@ -1,0 +1,10 @@
+<div class="w-full grid grid-cols-4 gap-3">
+  @for (centroid of this.processedImageStore.initialCentroids(); track centroid; let i = $index) {
+    <app-centroid 
+      [index]="i"
+      [centroid]="centroid()"
+      [isSelected]="i === this.centroidSelectorService.selectedCentroidIndex()"
+      [onSelected]="this.centroidSelectorService.onCentroidSelectedBound"
+      ></app-centroid>
+  }
+</div>

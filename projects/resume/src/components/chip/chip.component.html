@@ -1,0 +1,17 @@
+<div
+  [ngClass]="{
+    'rounded-full px-2 py-0.5 padding text-sm inline': true,
+    'text-xs': isSmall() === true,
+    'text-sm': isSmall() === false,
+
+  }"
+  [style]="style()"
+>
+  <ng-content>
+    {{ language() }}
+    @if (version()) {<span style="font-size: 0.75em">
+      {{ version() }}
+    </span>
+    }
+  </ng-content>
+</div>

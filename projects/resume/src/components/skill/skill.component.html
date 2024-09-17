@@ -1,0 +1,13 @@
+<div class="flex justify-between">
+  <ng-content />
+  <div class="flex gap-x-1">
+    @for (level of levelArr(); track $index) {
+      @if (level === 1) {
+        <div class="skill basis-1/5 bg-orange-400"></div>
+      }
+      @else {
+        <div class="skill basis-1/5 bg-orange-100"></div>
+      }
+    }
+  </div>
+</div>

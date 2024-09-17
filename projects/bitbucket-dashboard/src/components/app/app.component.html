@@ -1,0 +1,69 @@
+<div class="flex flex-col h-screen">
+  <div>
+    <mat-expansion-panel
+      [ngClass]="{
+        '!rounded-none !shadow-none !bg-slate-50 !bg-gradient-to-r !from-blue-50 !to-blue-300': true,
+        'border-b-4 border-blue-600': !appStore.isLoading()
+      }"
+      hideToggle=""
+    >
+      <mat-expansion-panel-header class="!px-3">
+        <div class="flex items-center justify-between gap-3 p-1 w-full">
+          <div class="flex items-center gap-3 text-xl">
+            <mat-icon svgIcon="bitbucket" inline class="!h-6"></mat-icon>
+            <div class="text-2xl font-light mt-1">Dashboard</div>
+          </div>
+          <mat-icon>edit</mat-icon>
+        </div>
+      </mat-expansion-panel-header>
+      <app-api-inputs class="border-b"></app-api-inputs>
+    </mat-expansion-panel>
+
+    @if (appStore.isLoading()) {
+    <mat-progress-bar
+      mode="query"
+      class="!bg-gradient-to-r from-blue-600 to-purple-600"
+    ></mat-progress-bar>
+    } @if (appStore.httpErrors().length > 0) {
+    <div class="flex flex-col gap-3 p-3 bg-red-200 divide-y">
+      @for (error of appStore.httpErrors(); track $index) {
+      <div class="flex justify-between gap-3">
+        <div>
+          <div>Error at {{ error[0] }}</div>
+          <div>
+            {{ errorToString(error[1]) }}
+          </div>
+        </div>
+        <div>
+          <button mat-icon-button (click)="appStore.removeError(error[0])">
+            <mat-icon>close</mat-icon>
+          </button>
+        </div>
+      </div>
+      }
+    </div>
+    }
+  </div>
+
+  <div class="grow flex flex-col">
+    @if (hasFeature(Features.GitCommitHistory)) {
+    <app-git-commits></app-git-commits>
+    } @if (hasFeatureInFeatureGroup(FeatureGroups.PullRequests)) {
+    <app-pull-request-counter></app-pull-request-counter>
+    } @if (hasFeatureInFeatureGroup(FeatureGroups.PullRequestCharts)) {
+    <div class="grow grid grid-cols-2">
+      @if (hasFeature(Features.PullRequestAgeChart)) {
+      <app-pr-age-chart></app-pr-age-chart>
+      } @if (hasFeature(Features.PullRequestLastUpdatedChart)) {
+      <app-pr-last-updated-chart></app-pr-last-updated-chart>
+      } @if (hasFeature(Features.PullRequestParticipationChart)) {
+      <app-pr-participation-chart></app-pr-participation-chart>
+      } @if (hasFeature(Features.PullRequestSubmittedChart)) {
+      <app-pr-submitted-by-author-chart></app-pr-submitted-by-author-chart>
+      }
+    </div>
+    } @if (hasFeature(Features.OpenPullRequestTable)) {
+    <app-pull-request-table></app-pull-request-table>
+    }
+  </div>
+</div>

@@ -1,0 +1,101 @@
+{
+  "core.repositoryformatversion": [
+    "1"
+  ],
+  "core.filemode": [
+    "false"
+  ],
+  "core.ignorecase": [
+    "true"
+  ],
+  "filter.lfs.smudge": [
+    "git-lfs smudge --skip -- %f"
+  ],
+  "filter.lfs.process": [
+    "git-lfs filter-process --skip"
+  ],
+  "remote.origin.url": [
+    "https://github.com/Xerner/manifests"
+  ],
+  "remote.origin.fetch": [
+    "+refs/heads/*:refs/remotes/origin/*"
+  ],
+  "manifest.platform": [
+    "auto"
+  ],
+  "extensions.preciousobjects": [
+    "true"
+  ],
+  "branch.default.remote": [
+    "origin"
+  ],
+  "branch.default.merge": [
+    "refs/heads/development"
+  ],
+  "repo.existingprojectcount": [
+    "6"
+  ],
+  "repo.newprojectcount": [
+    "0"
+  ],
+  "repo.syncstate.main.synctime": [
+    "2024-09-17T02:39:38.346865+00:00"
+  ],
+  "repo.syncstate.main.version": [
+    "1"
+  ],
+  "repo.syncstate.sys.argv": [
+    "['C:\\\\Users\\\\kenne\\\\Projects\\\\.repo\\\\repo/main.py', '--repo-dir=C:\\\\Users\\\\kenne\\\\Projects\\\\.repo', '--wrapper-version=2.45', '--wrapper-path=C:\\\\Users\\\\kenne\\\\.bin\\\\repo', '--', 'sync']"
+  ],
+  "repo.syncstate.options.jobs": [
+    "4"
+  ],
+  "repo.syncstate.options.outermanifest": [
+    "true"
+  ],
+  "repo.syncstate.options.jobsnetwork": [
+    "4"
+  ],
+  "repo.syncstate.options.jobscheckout": [
+    "4"
+  ],
+  "repo.syncstate.options.mpupdate": [
+    "true"
+  ],
+  "repo.syncstate.options.clonebundle": [
+    "true"
+  ],
+  "repo.syncstate.options.retryfetches": [
+    "0"
+  ],
+  "repo.syncstate.options.prune": [
+    "true"
+  ],
+  "repo.syncstate.options.repoverify": [
+    "true"
+  ],
+  "repo.syncstate.options.quiet": [
+    "false"
+  ],
+  "repo.syncstate.options.verbose": [
+    "false"
+  ],
+  "repo.syncstate.remote.origin.url": [
+    "https://github.com/Xerner/manifests"
+  ],
+  "repo.syncstate.remote.origin.fetch": [
+    "+refs/heads/*:refs/remotes/origin/*"
+  ],
+  "repo.syncstate.branch.default.remote": [
+    "origin"
+  ],
+  "repo.syncstate.branch.default.merge": [
+    "refs/heads/development"
+  ],
+  "repo.syncstate.repo.existingprojectcount": [
+    "6"
+  ],
+  "repo.syncstate.repo.newprojectcount": [
+    "0"
+  ]
+}

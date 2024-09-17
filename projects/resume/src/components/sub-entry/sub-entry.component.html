@@ -1,0 +1,21 @@
+<div class="pl-3 mt-2">
+  <div class="flex justify-between">
+    <div class="text-md font-medium">
+      {{ title() }}
+    </div>
+    <div class="flex justify-between text-sm text-slate-500">
+      <div>
+        {{ startDate().toFormat(dateFormat) }} -
+        @if (endDate() == null) {
+          Present
+        }
+        @else {
+          {{ endDate()!.toFormat(dateFormat) }}
+        }
+      </div>
+    </div>
+  </div>
+  <div>
+    <ng-content />
+  </div>
+</div>

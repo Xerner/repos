@@ -1,0 +1,35 @@
+@for $i from 1 through 3 {
+  @keyframes fadeIn-#{$i} {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: calc(0.1 + ($i * 0.2));
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+
+  @-webkit-keyframes fadeIn-#{$i} {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: calc(0.1 + ($i * 0.2));
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .fadeIn-#{$i} {
+    animation-name: fadeIn-#{$i};
+    animation-duration: 1s;
+  }
+}
