@@ -6,3 +6,4 @@ git config --global push.recurseSubmodules check # makes git push fail if submod
 git config --global push.recurseSubmodules on-demand # makes git push also push submodule(s) changes
 git config alias.supdate 'submodule update --remote --merge --init --recursive' # adds a new git command for updating all submodules recursively with merge
 git config --global alias.scommitall "submodule foreach --recursive 'git commit'"
+git config --global alias.saddall "submodule foreach --recursive 'git add'"
